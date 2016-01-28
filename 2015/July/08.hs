@@ -3,14 +3,14 @@ doubleMe x = x + x
 doubleUs x y = doubleMe x + doubleMe y
 
 wSmallNumber x = if x > 100
-                  then x
-                  else x * 2
+  then x
+  else x * 2
 
-wSmallNumber' x = (if x > 100
-                    then x
-                    else x * 2) + 1
+  wSmallNumber' x = (if x > 100
+    then x
+    else x * 2) + 1
 
-joinListInt = 0:([1,2,3,4] ++ [5,6,7,8])
+  joinListInt = 0:([1,2,3,4] ++ [5,6,7,8])
 -- [0,1,2,3,4,5,6,7,8]
 
 joinListStr = 'a':(" ice" ++ " candy")
