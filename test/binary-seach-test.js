@@ -31,6 +31,6 @@ describe('binSearch find Index', function () {
         }
       );
 
-      assert.deepEqual(result, 1);
+      assert.deepEqual(result, 8);
   });
 });
