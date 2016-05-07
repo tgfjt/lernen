@@ -4,8 +4,8 @@
 #include "hello.h"
 
 char *hello(char *str) {
-  int size = strlen(str) + 10;
-  char *message = (char *) malloc(size);
+  int length = strlen("Hello: \n") + strlen(str) + 1;
+  char *message = (char *) malloc(length);
 
   if (message == NULL) {
     exit(EXIT_FAILURE);
