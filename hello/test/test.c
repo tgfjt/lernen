@@ -7,9 +7,9 @@
 int main(void) {
 
   char *foo = hello("foo");
-  char expected[12] = "Hello: foo\n";
+  char *expected = "Hello: foo\n";
 
-  if (strcmp(foo, expected)) {
+  if (strncmp(foo, expected, strlen(expected))) {
     puts("\n");
     printf("  expected: '%s'\n", foo);
     printf("    actual: '%s'\n", expected);
