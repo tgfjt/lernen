@@ -4,23 +4,21 @@
 #include <assert.h>
 #include "../src/hello.h"
 
-int
-main(void) {
+int main(void) {
 
   char *foo = hello("foo");
   char expected[12] = "Hello: foo\n";
 
   if (strcmp(foo, expected)) {
-    printf("\n");
+    puts("\n");
     printf("  expected: '%s'\n", foo);
     printf("    actual: '%s'\n", expected);
-    printf("\n");
+    puts("\n");
     free(foo);
-    exit(EXIT_FAILURE);
+    return EXIT_FAILURE;
   } else {
-    printf("\n");
-    printf("Success.\n");
+    puts("Success.");
     free(foo);
-    exit(EXIT_SUCCESS);
+    return EXIT_SUCCESS;
   }
 }

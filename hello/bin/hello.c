@@ -3,10 +3,9 @@
 #include <string.h>
 #include "../src/hello.h"
 
-int
-main(int argc, char **argv) {
+int main(int argc, char **argv) {
   if (argc > 1) {
-    char* str = hello(argv[1]);
+    char *str = hello(argv[1]);
 
     printf("%s", str);
     free(str);

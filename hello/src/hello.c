@@ -3,8 +3,7 @@
 #include <string.h>
 #include "hello.h"
 
-char *
-hello(char *str) {
+char *hello(char *str) {
   int size = strlen(str) + 10;
   char *message = (char *) malloc(size);
 
