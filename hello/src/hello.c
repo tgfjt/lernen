@@ -8,7 +8,7 @@ char *hello(char *str) {
   char *message = (char *) malloc(length);
 
   if (message == NULL) {
-    exit(EXIT_FAILURE);
+    return NULL;
   }
 
   sprintf(message, "Hello: %s\n", str);
