@@ -1,0 +1,8 @@
+deps/
+*.out
+*.o
+*.s
+
+*.out.*
+
+*.dSYM
