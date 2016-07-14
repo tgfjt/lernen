@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test wasm</title>
+</head>
+<body>
+  <h1>Test Wasm!</h1>
+  <p id="result"></p>
+  <script>
+    fetch('/test.wasm')
+      .then((res) => res.arrayBuffer())
+      .then((bytes) => WebAssembly.compile(bytes))
+      .then((module) => new WebAssembly.Instance(module))
+      .then((mod) => mod.exports.square(9))
+      .then((result) => {
+        document.getElementById('result').innerHTML = `Result:  ${result}`
+      })
+  </script>
+</body>
+</html>
