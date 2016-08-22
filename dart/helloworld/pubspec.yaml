@@ -1,0 +1,4 @@
+name: helloworld
+description: try it out
+dependencies:
+  args: ^0.10.0
